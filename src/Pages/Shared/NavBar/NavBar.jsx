@@ -7,7 +7,6 @@ import {
   Spinner,
 } from "@material-tailwind/react";
 
-import nIcon from "../../../assets/navIcon.png";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
 import UserProfile from "../../../Component/UserProfile/UserProfile";
@@ -39,7 +38,7 @@ const NavBar = () => {
         <NavLink
           to={"/"}
           className={ ({isActive}) => 
-            isActive? "flex items-center text-lg text-[#FF5D64] border py-1 px-4 border-[#FF5D64] rounded-lg hover:scale-95 hover:duration-300 duration-300 font-bold" : "flex items-center text-lg text-[#222121] hover:text-[#FF5D64] hover:text-xl hover:duration-300 duration-300 font-bold"
+            isActive? "flex items-center text-lg text-[#6dc234] border py-1 px-4 border-[#6dc234] rounded-lg hover:scale-95 hover:duration-300 duration-300 font-medium" : "flex items-center text-lg text-[#222121] hover:text-[#6dc234] hover:text-xl hover:duration-300 duration-300 font-bold"
             
           }
         >
@@ -50,7 +49,7 @@ const NavBar = () => {
         <NavLink
           to={"/allSpot"}
           className={ ({isActive}) => 
-            isActive? "flex items-center text-lg text-[#FF5D64] border py-1 px-4 border-[#FF5D64] rounded-lg hover:scale-95 hover:duration-300 duration-300 font-bold" : "flex items-center text-lg text-[#222121] hover:text-[#FF5D64] hover:text-xl hover:duration-300 duration-300 font-bold"
+            isActive? "flex items-center text-lg text-[#6dc234] border py-1 px-4 border-[#6dc234] rounded-lg hover:scale-95 hover:duration-300 duration-300 font-medium" : "flex items-center text-lg text-[#222121] hover:text-[#6dc234] hover:text-xl hover:duration-300 duration-300 font-bold"
             
           }
         >
@@ -62,7 +61,7 @@ const NavBar = () => {
         <NavLink
           to={"/contact"}
           className={ ({isActive}) => 
-            isActive? "flex items-center text-lg text-[#FF5D64] border py-1 px-4 border-[#FF5D64] rounded-lg hover:scale-95 hover:duration-300 duration-300 font-bold" : "flex items-center text-lg text-[#222121] hover:text-[#FF5D64] hover:text-xl hover:duration-300 duration-300 font-bold"
+            isActive? "flex items-center text-lg text-[#6dc234] border py-1 px-4 border-[#6dc234] rounded-lg hover:scale-95 hover:duration-300 duration-300 font-medium" : "flex items-center text-lg text-[#222121] hover:text-[#6dc234] hover:text-xl hover:duration-300 duration-300 font-bold"
             
           }
         >
@@ -75,7 +74,7 @@ const NavBar = () => {
         <NavLink
           to={"/myList"}
           className={ ({isActive}) => 
-            isActive? "flex items-center text-lg text-[#FF5D64] border py-1 px-4 border-[#FF5D64] rounded-lg hover:scale-95 hover:duration-300 duration-300 font-bold" : "flex items-center text-lg text-[#222121] hover:text-[#FF5D64] hover:text-xl hover:duration-300 duration-300 font-bold"
+            isActive? "flex items-center text-lg text-[#6dc234] border py-1 px-4 border-[#6dc234] rounded-lg hover:scale-95 hover:duration-300 duration-300 font-medium" : "flex items-center text-lg text-[#222121] hover:text-[#6dc234] hover:text-xl hover:duration-300 duration-300 font-bold"
             
           }
         >
@@ -88,7 +87,7 @@ const NavBar = () => {
         <NavLink
           to={"/addSpot"}
           className={ ({isActive}) => 
-            isActive? "flex items-center text-lg text-[#FF5D64] border py-1 px-4 border-[#FF5D64] rounded-lg hover:scale-95 hover:duration-300 duration-300 font-bold" : "flex items-center text-lg text-[#222121] hover:text-[#FF5D64] hover:text-xl hover:duration-300 duration-300 font-bold"
+            isActive? "flex items-center text-lg text-[#6dc234] border py-1 px-4 border-[#6dc234] rounded-lg hover:scale-95 hover:duration-300 duration-300 font-medium" : "flex items-center text-lg text-[#222121] hover:text-[#6dc234] hover:text-xl hover:duration-300 duration-300 font-bold"
             
           }
         >
@@ -107,26 +106,26 @@ const NavBar = () => {
 
   return (
     <>
-      <div className=" max-h-[768px]">
-        <Navbar className="sticky top-0 z-10 h-max max-w-full shadow-none rounded-none py-2  lg:py-4 ">
+      <div className="">
+        <Navbar className="sticky top-0 z-10  max-w-full shadow-none rounded-none py-2 lg:py-4 ">
           <div className="flex items-center justify-between text-blue-gray-900">
             <div className=" flex items-center gap-4">
               <div>
-                <img src={nIcon} alt="" className=" w-16 h-16" />
+                <img src={'https://i.postimg.cc/NMWCFzSs/logo.png'} alt="" className="absolute w-60 -z-10 top-6" />
               </div>
               <Typography
                 as="a"
                 href="#"
-                className="mr-4 cursor-pointer py-1.5 font-bold text-3xl "
+                className="ml-16 cursor-pointer font-bold text-3xl "
               >
-                Traum<span className=" text-[#ff0000cf]">Heim</span>
+                ExploreHub
               </Typography>
             </div>
             <div className="mr-4 hidden lg:block">{navList}</div>
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-x-8">
                 {
-                  user && <button onClick={handleLogout} className="hidden xl:inline-block bg-gradient-to-r from-[#ff0000] to-[#FF8938]  py-2 px-5 text-white font-bold rounded-md text-xl hover:scale-105 duration-500 hover:duration-500  ">
+                  user && <button onClick={handleLogout} className="hidden xl:inline-block bg-gradient-to-r from-[#6dc234] to-[#6dc234ad]  py-2 px-5 text-white font-bold rounded-md text-xl hover:scale-105 duration-500 hover:duration-500  ">
                   <span>Log Out</span>
                 </button>
                 }
@@ -134,7 +133,7 @@ const NavBar = () => {
                   <UserProfile />
                 ) : (
                   <Link to={"/login"}>
-                    <button className="hidden xl:inline-block bg-gradient-to-r from-[#ff0000] to-[#FF8938]  py-2 px-5 text-white font-bold rounded-md text-xl hover:scale-105 duration-500 hover:duration-500  ">
+                    <button className="hidden xl:inline-block bg-gradient-to-r from-[#6dc234] to-[#6dc234ad]  py-2 px-5 text-white font-bold rounded-md text-xl hover:scale-105 duration-500 hover:duration-500  ">
                       <span>Log In</span>
                     </button>
                   </Link>
@@ -183,11 +182,11 @@ const NavBar = () => {
             {navList}
             <div className="flex items-center gap-x-7">
               
-                  <button onClick={handleLogout} className=" hover:bg-gradient-to-r from-[#ff0000] to-[#FF8938]  py-2 px-5 hover:text-white font-bold rounded-md text-xl hover:scale-105 duration-500 hover:duration-500 w-full text-[#2e2d2d] border border-[#FF8938]  ">
+                  <button onClick={handleLogout} className=" hover:bg-gradient-to-r from-[#6dc234] to-[#6dc234ad]  py-2 px-5 hover:text-white font-bold rounded-md text-xl hover:scale-105 duration-500 hover:duration-500 w-full text-[#2e2d2d] border border-[#FF8938]  ">
                   <span>Log Out</span>
                 </button>
                 <Link to={"/login"} className=" w-full">
-                    <button className="w-full bg-gradient-to-r from-[#ff0000] to-[#FF8938]  py-2 px-3 text-white font-bold rounded-md text-xl hover:scale-105 duration-500 hover:duration-500  ">
+                    <button className="w-full bg-gradient-to-r from-[#6dc234] to-[#6dc234ad]  py-2 px-3 text-white font-bold rounded-md text-xl hover:scale-105 duration-500 hover:duration-500  ">
                       <span>Log In</span>
                     </button>
                   </Link>
