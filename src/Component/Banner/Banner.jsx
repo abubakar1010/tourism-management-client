@@ -44,13 +44,13 @@ const Banner = () => {
                     </div>
                     <div className=" flex gap-28 items-center border-l-2 border-black/40 pl-8 ">
                       <p className=" text-[#0f2454]">Destination</p>
-                      <FaAngleDown className=" text-lg text-[#2095AE]" />
+                      <FaAngleDown className=" text-lg text-[#6dc234]" />
                     </div>
                     <div className=" flex gap-28 items-center border-x-2 border-black/40 px-8 ">
                       <p className=" text-[#0f2454]">Duration</p>
-                      <FaAngleDown className=" text-lg text-[#2095AE]" />
+                      <FaAngleDown className=" text-lg text-[#6dc234]" />
                     </div>
-                    <div className=" flex gap-2 items-center border-black/40 px-12 py-3 bg-[#2095AE] text-white rounded-sm hover:bg-[#0f2454] duration-700 hover:duration-700 ">
+                    <div className=" flex gap-2 items-center border-black/40 px-12 py-3 bg-[#6dc234] text-white rounded-sm hover:bg-[#0f2454] duration-700 hover:duration-700 ">
                       <IoMdSearch className=" text-2xl" />
                       <p className=" font-medium">Find Now</p>
                     </div>
@@ -80,13 +80,13 @@ const Banner = () => {
                     </div>
                     <div className=" flex gap-28 items-center border-l-2 border-black/40 pl-8 ">
                       <p className=" text-[#0f2454]">Destination</p>
-                      <FaAngleDown className=" text-lg text-[#2095AE]" />
+                      <FaAngleDown className=" text-lg text-[#6dc234]" />
                     </div>
                     <div className=" flex gap-28 items-center border-x-2 border-black/40 px-8 ">
                       <p className=" text-[#0f2454]">Duration</p>
-                      <FaAngleDown className=" text-lg text-[#2095AE]" />
+                      <FaAngleDown className=" text-lg text-[#6dc234]" />
                     </div>
-                    <div className=" flex gap-2 items-center border-black/40 px-12 py-3 bg-[#2095AE] text-white rounded-sm hover:bg-[#0f2454] duration-700 hover:duration-700 ">
+                    <div className=" flex gap-2 items-center border-black/40 px-12 py-3 bg-[#6dc234] text-white rounded-sm hover:bg-[#0f2454] duration-700 hover:duration-700 ">
                       <IoMdSearch className=" text-2xl" />
                       <p className=" font-medium">Find Now</p>
                     </div>
@@ -98,7 +98,7 @@ const Banner = () => {
         </SwiperSlide>
 
         <SwiperSlide style={{ width: "100%" }}>
-          <div className=" bg-[url('https://i.postimg.cc/50F1Dw1G/photo-1421091242698-34f6ad7fc088.jpg">
+        <div className=" bg-[url('https://i.postimg.cc/DfMLrhYw/tour-destination-italy.jpg')] w-full h-[520px] bg-cover bg-center bg-no-repeat my-8 rounded-xl relative ">
             <div className="absolute inset-0 grid h-full w-full bg-[#1d1d1d70] rounded-xl">
             <div className="text-white  pt-28">
                 <h1 className=" text-6xl font-extrabold text-center ">The world is worth seeing </h1>
@@ -116,13 +116,13 @@ const Banner = () => {
                     </div>
                     <div className=" flex gap-28 items-center border-l-2 border-black/40 pl-8 ">
                       <p className=" text-[#0f2454]">Destination</p>
-                      <FaAngleDown className=" text-lg text-[#2095AE]" />
+                      <FaAngleDown className=" text-lg text-[#6dc234]" />
                     </div>
                     <div className=" flex gap-28 items-center border-x-2 border-black/40 px-8 ">
                       <p className=" text-[#0f2454]">Duration</p>
-                      <FaAngleDown className=" text-lg text-[#2095AE]" />
+                      <FaAngleDown className=" text-lg text-[#6dc234]" />
                     </div>
-                    <div className=" flex gap-2 items-center border-black/40 px-12 py-3 bg-[#2095AE] text-white rounded-sm hover:bg-[#0f2454] duration-700 hover:duration-700 ">
+                    <div className=" flex gap-2 items-center border-black/40 px-12 py-3 bg-[#6dc234] text-white rounded-sm hover:bg-[#0f2454] duration-700 hover:duration-700 ">
                       <IoMdSearch className=" text-2xl" />
                       <p className=" font-medium">Find Now</p>
                     </div>
