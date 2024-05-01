@@ -194,6 +194,7 @@ const NavBar = () => {
           </MobileNav>
         </Navbar>
       </div>
+      
     </>
   );
 };

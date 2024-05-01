@@ -94,7 +94,7 @@ const Register = () => {
     return (
         <>
         <Helmet>
-            <title>Register | TraumHeim </title>
+            <title>Register | ExploreHub </title>
         </Helmet>
             <div className="flex justify-center items-center my-16">
             <Card color="transparent" shadow={false}>

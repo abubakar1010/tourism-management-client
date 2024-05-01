@@ -80,7 +80,7 @@ const Login = () => {
   return (
     <>
       <Helmet>
-        <title>Login | TraumHeim </title>
+        <title>Login | ExploreHub </title>
       </Helmet>
       <div className=" flex justify-center items-center my-16">
         <Card color="transparent" shadow={false}>
