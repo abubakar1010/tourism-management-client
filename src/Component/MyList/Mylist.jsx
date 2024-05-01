@@ -1,40 +1,33 @@
 import { useLoaderData } from "react-router-dom";
 import { Card, Typography } from "@material-tailwind/react";
+import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 const Mylist = () => {
 
     const data = useLoaderData()
     console.log(data);
+    const [displayData, setDisplayData] = useState(data)
 
 
     const TABLE_HEAD = ["Id", "Country", "Price", "", ""];
- 
-const TABLE_ROWS = [
-  {
-    name: "John Michael",
-    job: "Manager",
-    date: "23/04/18",
-  },
-  {
-    name: "Alexa Liras",
-    job: "Developer",
-    date: "23/04/18",
-  },
-  {
-    name: "Laurent Perrier",
-    job: "Executive",
-    date: "19/09/17",
-  },
-  {
-    name: "Michael Levi",
-    job: "Developer",
-    date: "24/12/08",
-  },
-  {
-    name: "Richard Gran",
-    job: "Manager",
-    date: "04/10/21",
-  },
-];
+
+    const handleDelete = (id) => {
+
+        fetch(`http://localhost:5000/tourists/delete/${id}`,{
+            method: "DELETE",
+        })
+        .then( res => res.json())
+        .then( res => {
+            console.log(res);
+            if (res.deletedCount > 0) {
+                
+                toast.success("Congratulation! This item is successfully deleted")
+                const remaining = data.filter( item => item._id != id)
+                setDisplayData(remaining)
+            }
+        })
+    }
+
     return (
         <>
 
@@ -42,8 +35,8 @@ const TABLE_ROWS = [
       <table className="w-full min-w-max table-auto text-left">
         <thead>
           <tr>
-            {TABLE_HEAD.map((head) => (
-              <th key={head} className="border-b border-blue-gray-100 bg-blue-gray-50 p-4">
+            {TABLE_HEAD.map((head,index) => (
+              <th key={index} className="border-b border-blue-gray-100 bg-blue-gray-50 p-4">
                 <Typography
                   variant="small"
                   color="blue-gray"
@@ -56,7 +49,7 @@ const TABLE_ROWS = [
           </tr>
         </thead>
         <tbody>
-          {data.map(({_id, countryName, cost }, index) => (
+          {displayData.map(({_id, countryName, cost }) => (
             <tr key={_id} className="even:bg-blue-gray-50/50">
               <td className="p-4">
                 <Typography variant="small" color="blue-gray" className="font-normal">
@@ -74,13 +67,13 @@ const TABLE_ROWS = [
                 </Typography>
               </td>
               <td className="p-4">
-                <Typography as="a" href="#" variant="small" color="blue-gray" className="font-medium">
+                <Typography  variant="small" color="blue-gray" className="font-medium cursor-pointer">
                   Update
                 </Typography>
               </td>
               <td className="p-4">
-                <Typography as="a" href="#" variant="small" color="blue-gray" className="font-medium">
-                  Delete
+                <Typography variant="small" color="blue-gray" className="font-medium cursor-pointer">
+                  <span onClick={ () => handleDelete(_id)}>Delete</span>
                 </Typography>
               </td>
             </tr>
@@ -88,6 +81,7 @@ const TABLE_ROWS = [
         </tbody>
       </table>
     </Card>
+    <ToastContainer></ToastContainer>
 
 
         </>
