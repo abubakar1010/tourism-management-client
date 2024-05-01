@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { Card, Typography } from "@material-tailwind/react";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
@@ -68,7 +68,9 @@ const Mylist = () => {
               </td>
               <td className="p-4">
                 <Typography  variant="small" color="blue-gray" className="font-medium cursor-pointer">
+                  <Link to={`/update/${_id}`}>
                   Update
+                  </Link>
                 </Typography>
               </td>
               <td className="p-4">
