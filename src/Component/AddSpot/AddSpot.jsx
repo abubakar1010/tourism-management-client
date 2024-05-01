@@ -35,7 +35,11 @@ const AddSpot = () => {
         .then( result => {
             if(result.insertedId){
                 toast.success("Congratulations! Your data has been successfully added")
+                form.reset()
             }
+        })
+        .catch( error => {
+          toast.error(`Oops! ${error.message}`)
         })
     }
 
