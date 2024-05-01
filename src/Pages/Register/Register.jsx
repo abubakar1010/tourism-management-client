@@ -22,7 +22,7 @@ const Register = () => {
   const [isShowPassword, setIsShowPassword] = useState(false)
   const navigate = useNavigate()
 
-  // console.log(register);
+  // //console.log(register);
 
   const handleShowPassword = () => {
 
@@ -39,7 +39,7 @@ const Register = () => {
     const password = e.target.password.value
     const accepted = e.target.terms.checked
 
-    console.log("checkbox",accepted);
+    //console.log("checkbox",accepted);
 
     if ( password.length < 6) {
       toast.warn("Password must be at least 6 characters long.")
@@ -73,23 +73,23 @@ const Register = () => {
 
       })
       .catch( (error) => {
-        console.log(error);
+        //console.log(error);
       })
 
     })
     .catch( (error) => {
 
       toast.error(`Oops! Registration failed. Please check your information and try again.`)
-      console.log(error);
+      //console.log(error);
 
     })
 
   }
 
-  console.log(user, userData);
+  //console.log(user, userData);
 
   setUserData(user)
-  // console.log(auth.currentUser);
+  // //console.log(auth.currentUser);
 
     return (
         <>

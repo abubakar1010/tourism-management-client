@@ -18,7 +18,7 @@ const Login = () => {
 
   const location = useLocation();
 
-  console.log(location);
+  //console.log(location);
 
   const handleShowPassword = () => {
     setIsShowPassword(!isShowPassword);
@@ -76,7 +76,7 @@ const Login = () => {
       });
   };
 
-  // console.log(isError);
+  // //console.log(isError);
   return (
     <>
       <Helmet>
