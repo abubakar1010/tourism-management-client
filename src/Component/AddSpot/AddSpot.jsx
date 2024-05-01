@@ -23,7 +23,7 @@ const AddSpot = () => {
 
         const spotData = {name, email, spotName, countryName, image, location, cost, season, time, visitor, description};
 
-        console.log(spotData);
+        //console.log(spotData);
         fetch('http://localhost:5000/tourists',{
             method: "POST",
             headers:{
@@ -35,7 +35,7 @@ const AddSpot = () => {
         .then( result => {
             if(result.insertedId){
                 toast.success("Congratulations! Your data has been successfully added")
-                form.reset()
+                // form.reset()
             }
         })
         .catch( error => {
