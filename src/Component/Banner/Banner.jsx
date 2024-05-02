@@ -7,6 +7,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { SwiperSlide, Swiper } from "swiper/react";
 import { FaAngleDown } from "react-icons/fa6";
 import { IoMdSearch } from "react-icons/io";
+import { Typewriter } from "react-simple-typewriter";
 
 const Banner = () => {
   return (
@@ -15,7 +16,7 @@ const Banner = () => {
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 6000,
+          delay: 14000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -31,7 +32,16 @@ const Banner = () => {
             <div className="text-white pt-28">
                 <h1 className=" text-6xl font-extrabold text-center ">Discover the world of wonders </h1>
                 <p className=" text-2xl uppercase font-bold mt-7 mb-3 text-center">
-                With ExploreHub
+                <Typewriter
+            words={['With ExploreHub', ' through Spain', 'through The Fabulous Wonders of Greece']}
+            loop={false}
+            cursor
+            cursorStyle='_'
+            typeSpeed={90}
+            deleteSpeed={50}
+            delaySpeed={1000}
+            
+          />
                 </p>
               </div>
             </div>

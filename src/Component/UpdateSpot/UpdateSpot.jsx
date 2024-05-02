@@ -193,7 +193,7 @@ const UpdateSpot = () => {
 
               <button
                 type="submit"
-                className="mt-6 bg-gradient-to-r from-[#6dc234] to-[#6dc234ad] px-12  py-3 rounded-lg font-bold text-white text-xl "
+                className="mt-6 radient-to-r from-[#6dc234] to-[#6dc234ad] px-12  py-3 rounded-lg font-bold text-white text-xl "
               >
                 Update
               </button>

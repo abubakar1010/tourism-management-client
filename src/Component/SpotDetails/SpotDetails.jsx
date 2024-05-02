@@ -1,47 +1,35 @@
 import { useLoaderData } from "react-router-dom";
 import PropTypes from "prop-types";
-import "./slide.css";
-import { IoBedOutline, IoHomeOutline, IoLocation, IoTimeOutline } from "react-icons/io5";
-import { FaPersonRunning, FaUmbrellaBeach, FaUser } from "react-icons/fa6";
-import { MdOutlineBookmarkAdded, MdOutlineKitchen, MdOutlinePool } from "react-icons/md";
+import {  IoLocation } from "react-icons/io5";
 import { GiRapidshareArrow } from "react-icons/gi";
-import { useContext, useState } from "react";
-import { TbBath } from "react-icons/tb";
-import { HiMiniCircleStack, HiOutlineArrowTopRightOnSquare } from "react-icons/hi2";
-import { PiIntersectSquareLight } from "react-icons/pi";
-import { AuthContext } from "../../AuthProvider/AuthProvider";
-import "swiper/css";
-import "swiper/css/navigation";
-
-// import required modules
-import { Autoplay, Navigation } from "swiper/modules";
-import { SwiperSlide, Swiper } from "swiper/react";
-import moment from "moment";
-import { Option, Select } from "@material-tailwind/react";
-import { BsFillCameraVideoFill } from "react-icons/bs";
-import { BiCoinStack, BiDollar } from "react-icons/bi";
+import { HiMiniCircleStack } from "react-icons/hi2";
 import { Helmet } from "react-helmet-async";
 import { FaStar } from "react-icons/fa";
+import { BiDollar } from "react-icons/bi";
+import moment from "moment";
+import FAQ from "../FAQ/FAQ";
+
 
 const SpotDetails = () => {
   const data = useLoaderData();
 
+
+
   const {
     image,
     spotName,
-    countryName,
+    // countryName,
     rating,
     location,
     cost,
     description,
-    season,
+    // season,
     reviews,
     time,
-    visitor
+    // visitor
   } = data;
   //console.log(data);
 
-  const { user } = useContext(AuthContext);
 
   return (
     <>
@@ -52,6 +40,10 @@ const SpotDetails = () => {
         <div>
           <div className={`w-full h-[470px] `}>
             <img src={image} alt="" className="object-cover h-full w-full" />
+          </div>
+          <div>
+            <p className=" text-2xl font-bold mb-4 mt-9">Discover the many sides of {spotName}</p>
+            <p>{description}</p>
           </div>
 
           <div className=" mt-12 border-b border-[#64626265] pb-6">
@@ -160,57 +152,41 @@ const SpotDetails = () => {
             </div>
           </div>
           </div>
-
-          <section className="  mb-16 mt-12">
-            <div>
-              <div className=" flex flex-col xl:flex-row gap-6 justify-between my-24">
-                <div className=" shadow-xl px-8 py-6 border border-[#00000086]  h-[430px] mt-20 xl:mt-0 ">
-                  <div className=" xl:w-[320px]">
-                    <div className=" flex items-center gap-6">
-                      <div>
-                        <img
-                          className="cursor-pointer max-w-[80px] rounded-full w-14 h-14  object-cover"
-                          src={user?.photoURL}
-                        />
-                      </div>
-                      <div>
-                        <p className=" font-bold  text-xl">
-                          {user?.displayName}
-                        </p>
-                        <p className=" font-medium text-lg  ">{user?.email}</p>
-                      </div>
-                    </div>
-                    <div className=" mt-12 mb-7">
-                      <input
-                        type="text"
-                        placeholder="Your Name"
-                        name=""
-                        id=""
-                        className=" border-2 rounded-md mb-4 py-2
-                       border-[#2a2929a1] w-full px-6"
-                      />
-                      <input
-                        type="text"
-                        placeholder="Your Phone"
-                        name=""
-                        id=""
-                        className=" border-2 rounded-md mb-2
-                       border-[#2a2929a1] mt-4 py-2 w-full px-6"
-                      />
-                    </div>
-
-                    <p className="  font-medium">{`I'm interested in this property and I'd like to know more details.`}</p>
-                    <button className="mt-6 bg-gradient-to-r from-[#6dc234] to-[#6dc234ad] w-full py-3 rounded-lg font-bold text-white  text-xl">
-                      Send Message
-                    </button>
-                  </div>
-                </div>
-              </div>
-              
-            </div>
-          </section>
         </div>
       </div>
+
+      <div className=" flex items-center gap-12 rounded-md bg-[#ecede7] w-[660px] py-7 px-12">
+        <div>
+          {/* <FaGlobeEurope></FaGlobeEurope> */}
+          <img className=" w-32" src={'https://i.postimg.cc/QMykkWdt/illustration-globe-green.png'} alt="" />
+        </div>
+        <div>
+          <p className=" text-xl font-bold mb-2">Start planning today</p>
+          <p className="  font-semibold mb-4 text-[#504e4e]">An expert specializing in tours of this region is here to help.</p>
+          <p className=" border border-black inline-block px-9 hover:border-none py-3 text-lg font-semibold rounded-full hover:bg-gradient-to-r from-[#6dc234] to-[#6dc234ad]  hover:text-white">Talk to a Tour Consultant</p>
+        </div>
+      </div>
+
+      <div className=" my-16">
+        <h1 className=" font-bold text-xl mb-3">Flights</h1>
+        <p className=" text-[#313131]">Round-trip flights are one more thing we handle to make your journey as smooth as possible. Our team of travel experts will find the best flight itinerary for you at a competitive rate, thanks to our partnerships with top airlines.</p>
+        <div>
+          <h3 className=" text-lg font-bold text-[#000000bf] mt-7 mb-4">{"Add our airfare package and you'll get:"}</h3>
+          <ul className=" list-disc space-y-2 pl-4">
+            <li>Round-trip flight for your tour</li>
+            <li>Airport transfers at your destination</li>
+            <li>A great price locked in today</li>
+            <li>4/7 support from our dedicated service team</li>
+            <li>Options for arriving early, staying longer, or requesting an upgrade</li>
+            <li>Flexible rebooking options if your tour itinerary changes</li>
+          </ul>
+            <p className="underline mt-3 pl-4  font-bold">Find out more about flights</p>
+        </div>
+      </div>
+
+      <FAQ />
+
+      
     </>
   );
 };
@@ -220,3 +196,6 @@ SpotDetails.propTypes = {
 };
 
 export default SpotDetails;
+
+
+

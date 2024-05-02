@@ -28,15 +28,15 @@ const DisplaySpots = ({ element }) => {
   return (
     <div data-aos="fade-up" data-aos-duration="1000" className=" h-[420px] ">
       <div className="  flex items-center shadow-xl border-2 border-[#0003] h-full rounded-xl gap-12">
-        <div className=" ">
+        <div className="w-[515px]">
           <img
             src={image}
             alt=""
-            className=" w-full h-[410px] object-cover pl-4 py-6"
+            className=" w-[515px] h-[410px] object-cover pl-4 py-6"
           />
         </div>
 
-        <div className=" w-[70%] pr-6">
+        <div className=" w-[770px] pr-6">
           <div className=" flex justify-between items-center w-full">
             <div className=" flex gap-4 items-center pb-4">
               <p className=" bg-[#f1f2f3] text-[#323637] px-6 py-1 rounded-md">
@@ -107,7 +107,7 @@ const DisplaySpots = ({ element }) => {
           </div>
           </div>
 
-          <div className=" flex justify-between px-3 items-center pt-4 pb-7">
+          <div className=" flex justify-between px-3 items-center pt-4">
             <div className=" flex item-center gap-1">
               <IoLocation className=" text-2xl text-[#FF8938] " />
               <p>{location}</p>

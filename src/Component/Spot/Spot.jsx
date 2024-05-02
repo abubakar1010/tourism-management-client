@@ -4,6 +4,9 @@ import DisplaySpots from "../DisplaySpots/DisplaySpots";
 
 import { useLoaderData } from "react-router-dom";
 
+import WhyUs from "../WhyUs/WhyUs";
+import Team from "../Team/Team";
+
 const Spot = () => {
     const data = useLoaderData()
 
@@ -26,6 +29,14 @@ const Spot = () => {
             </div>
             <div>
                 <Countries />
+            </div>
+            
+            <div className=" my-28">
+                <WhyUs />
+            </div>
+
+            <div>
+                <Team />
             </div>
         </div>
     );

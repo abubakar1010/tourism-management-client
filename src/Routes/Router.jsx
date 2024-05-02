@@ -5,7 +5,6 @@ import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import PrivateRoute from "../Private/PrivateRoute";
-import BlogDetails from "../Component/Banner/BlogDetails";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import AddSpot from "../Component/AddSpot/AddSpot";
 import Spot from "../Component/Spot/Spot";
@@ -13,6 +12,7 @@ import AllSpot from "../Pages/AllSpot/AllSpot";
 import SpotDetails from "../Component/SpotDetails/SpotDetails";
 import Mylist from "../Component/MyList/Mylist";
 import UpdateSpot from "../Component/UpdateSpot/UpdateSpot";
+import CountryCard from "../Component/CountryCard/CountryCard";
 
 const router = createBrowserRouter([
   {
@@ -28,7 +28,7 @@ const router = createBrowserRouter([
                 path:"/",
                 element: <Spot />,
                 loader: () => fetch('http://localhost:5000/tourists')
-              }
+              },
             ]
         },
         {
@@ -52,6 +52,13 @@ const router = createBrowserRouter([
             loader: ({params}) => fetch(`http://localhost:5000/tourists/${params.id}`)
         },
         {
+            path: "/countryCards/cards/:countryName",
+            element: <PrivateRoute>
+              <CountryCard />
+            </PrivateRoute>,
+            loader: ({params}) => fetch(`http://localhost:5000/countries/countryCards/cards/${params.countryName}`)
+        },
+        {
             path: "/myList/email/:email",
             element: <PrivateRoute>
               <Mylist />
@@ -65,13 +72,7 @@ const router = createBrowserRouter([
             </PrivateRoute>,
             loader: ({params}) => fetch(`http://localhost:5000/tourists/update/${params.id}`)
         },
-        {
-          path: "/blogDetails/:id",
-          element: <PrivateRoute>
-            <BlogDetails />
-          </PrivateRoute>,
-          loader: () => fetch('/blog.json')
-      },
+        
         {
             path: "/addSpot",
             element: <PrivateRoute>
