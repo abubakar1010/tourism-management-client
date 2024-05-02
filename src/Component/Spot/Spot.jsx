@@ -1,4 +1,5 @@
 
+import Countries from "../Countries/Countries";
 import DisplaySpots from "../DisplaySpots/DisplaySpots";
 
 import { useLoaderData } from "react-router-dom";
@@ -8,7 +9,7 @@ const Spot = () => {
 
     return (
         <div className=" my-24">
-            <div className=" text-center">
+            <div className=" text-center mb-16">
                 <h1 className=" py-6 text-xl xl:text-4xl font-bold  px-3">
                     Skyline Serenity Where Luxury Living Reaches New Heights
                 </h1>
@@ -22,6 +23,9 @@ const Spot = () => {
                 {data.slice(0, 6).map((element) => (
                     <DisplaySpots key={element.id} element={element} />
                 ))}
+            </div>
+            <div>
+                <Countries />
             </div>
         </div>
     );

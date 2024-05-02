@@ -1,7 +1,8 @@
 import { Link, useLoaderData } from "react-router-dom";
 import { Card, Typography } from "@material-tailwind/react";
 import { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
+import Swal from "sweetalert2";
 const Mylist = () => {
 
     const data = useLoaderData()
@@ -12,21 +13,40 @@ const Mylist = () => {
     const TABLE_HEAD = ["Id", "Country", "Price", "", ""];
 
     const handleDelete = (id) => {
+      console.log(id);
+      Swal.fire({
+          title: 'Are you sure?',
+          text: "You won't be able to revert this!",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Yes, delete it!'
+      }).then((result) => {
+          if (result.isConfirmed) {
 
-        fetch(`http://localhost:5000/tourists/delete/${id}`,{
-            method: "DELETE",
-        })
-        .then( res => res.json())
-        .then( res => {
-            console.log(res);
-            if (res.deletedCount > 0) {
-                
-                toast.success("Congratulation! This item is successfully deleted")
-                const remaining = data.filter( item => item._id != id)
-                setDisplayData(remaining)
-            }
-        })
-    }
+
+              fetch(`http://localhost:5000/tourists/delete/${id}`, {
+                  method: 'DELETE'
+              })
+                  .then(res => res.json())
+                  .then(result => {
+                      console.log(result);
+                      if (result.deletedCount > 0) {
+                          Swal.fire(
+                              'Deleted!',
+                              'Your item has been deleted.',
+                              'success'
+                          )
+                          const remaining = displayData.filter(item => item._id !== id);
+                          setDisplayData(remaining)
+                      }
+                  })
+
+          }
+      })
+  }
+
 
     return (
         <>

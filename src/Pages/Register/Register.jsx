@@ -73,20 +73,20 @@ const Register = () => {
 
       })
       .catch( (error) => {
-        //console.log(error);
+        console.log(error);
       })
 
     })
     .catch( (error) => {
 
       toast.error(`Oops! Registration failed. Please check your information and try again.`)
-      //console.log(error);
+      console.log(error);
 
     })
 
   }
 
-  //console.log(user, userData);
+  console.log(user, userData);
 
   setUserData(user)
   // //console.log(auth.currentUser);

@@ -72,7 +72,7 @@ const NavBar = () => {
       {
         user && <Typography as="li" variant="small" className="p-1 font-normal">
         <NavLink
-          to={"/myList"}
+          to={`/myList/email/${user.email}`}
           className={ ({isActive}) => 
             isActive? "flex items-center text-lg text-[#6dc234] border py-1 px-4 border-[#6dc234] rounded-lg hover:scale-95 hover:duration-300 duration-300 font-medium" : "flex items-center text-lg text-[#222121] hover:text-[#6dc234] hover:text-xl hover:duration-300 duration-300 font-bold"
             
