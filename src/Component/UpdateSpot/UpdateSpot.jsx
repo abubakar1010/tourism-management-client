@@ -29,7 +29,7 @@ const UpdateSpot = () => {
         const spotData = {name, email, spotName, countryName, image, location, cost, season, time, visitor, description};
 
         //console.log(spotData);
-        fetch(`http://localhost:5000/tourists/update/${_id}`,{
+        fetch(`https://tourism-management-server-fawn.vercel.app/tourists/update/${_id}`,{
             method: "PUT",
             headers:{
                 "content-type": "application/json"

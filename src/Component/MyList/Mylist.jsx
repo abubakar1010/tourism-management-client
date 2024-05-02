@@ -26,7 +26,7 @@ const Mylist = () => {
           if (result.isConfirmed) {
 
 
-              fetch(`http://localhost:5000/tourists/delete/${id}`, {
+              fetch(`https://tourism-management-server-fawn.vercel.app/tourists/delete/${id}`, {
                   method: 'DELETE'
               })
                   .then(res => res.json())

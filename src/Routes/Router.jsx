@@ -27,7 +27,7 @@ const router = createBrowserRouter([
               {
                 path:"/",
                 element: <Spot />,
-                loader: () => fetch('http://localhost:5000/tourists')
+                loader: () => fetch('https://tourism-management-server-fawn.vercel.app/tourists')
               },
             ]
         },
@@ -42,35 +42,35 @@ const router = createBrowserRouter([
         {
             path: "/allSpot",
             element:<AllSpot />,
-            loader: () => fetch('http://localhost:5000/tourists')
+            loader: () => fetch('https://tourism-management-server-fawn.vercel.app/tourists')
         },
         {
             path: "/details/:id",
             element: <PrivateRoute>
               <SpotDetails />
             </PrivateRoute>,
-            loader: ({params}) => fetch(`http://localhost:5000/tourists/${params.id}`)
+            loader: ({params}) => fetch(`https://tourism-management-server-fawn.vercel.app/tourists/${params.id}`)
         },
         {
             path: "/countryCards/cards/:countryName",
             element: <PrivateRoute>
               <CountryCard />
             </PrivateRoute>,
-            loader: ({params}) => fetch(`http://localhost:5000/countries/countryCards/cards/${params.countryName}`)
+            loader: ({params}) => fetch(`https://tourism-management-server-fawn.vercel.app/countries/countryCards/cards/${params.countryName}`)
         },
         {
             path: "/myList/email/:email",
             element: <PrivateRoute>
               <Mylist />
             </PrivateRoute>,
-            loader: ({params}) => fetch(`http://localhost:5000/tourists/email/${params.email}`)
+            loader: ({params}) => fetch(`https://tourism-management-server-fawn.vercel.app/tourists/email/${params.email}`)
         },
         {
             path: "/update/:id",
             element: <PrivateRoute>
               <UpdateSpot />
             </PrivateRoute>,
-            loader: ({params}) => fetch(`http://localhost:5000/tourists/update/${params.id}`)
+            loader: ({params}) => fetch(`https://tourism-management-server-fawn.vercel.app/tourists/update/${params.id}`)
         },
         
         {
