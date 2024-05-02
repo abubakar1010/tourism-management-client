@@ -26,18 +26,18 @@ const DisplaySpots = ({ element }) => {
     description,
   } = element;
   return (
-    <div data-aos="fade-up" data-aos-duration="1000" className=" h-[420px] ">
-      <div className="  flex items-center shadow-xl border-2 border-[#0003] h-full rounded-xl gap-12">
-        <div className="w-[515px]">
+    <div data-aos="fade-up" data-aos-duration="1000" className=" lg:h-[420px] ">
+      <div className="flex flex-col lg:flex-row items-center shadow-xl border-2 border-[#0003] h-full rounded-xl gap-12">
+        <div className=" w-full lg:w-[515px]">
           <img
             src={image}
             alt=""
-            className=" w-[515px] h-[410px] object-cover pl-4 py-6"
+            className=" w-full lg:w-[515px] h-[410px] object-cover px-2 lg:pl-4 py-6"
           />
         </div>
 
-        <div className=" w-[770px] pr-6">
-          <div className=" flex justify-between items-center w-full">
+        <div className=" lg:w-[770px] px-2 lg:pr-6">
+          <div className=" flex flex-col lg:flex-row lg:justify-between lg:items-center w-full">
             <div className=" flex gap-4 items-center pb-4">
               <p className=" bg-[#f1f2f3] text-[#323637] px-6 py-1 rounded-md">
                 Family
@@ -49,8 +49,8 @@ const DisplaySpots = ({ element }) => {
                 Culture
               </p>
             </div>
-            <div className="pb-4">
-              <p className=" text-white bg-green-500 px-4 py-1  rounded-md">
+            <div className="pb-4 inline-block">
+              <p className=" inline-block text-white bg-green-500 px-4 py-1  rounded-md">
                 10% OFF
               </p>
             </div>
@@ -107,7 +107,7 @@ const DisplaySpots = ({ element }) => {
           </div>
           </div>
 
-          <div className=" flex justify-between px-3 items-center pt-4">
+          <div className=" flex justify-between px-3 items-center pt-4 pb-8 lg:pb-3">
             <div className=" flex item-center gap-1">
               <IoLocation className=" text-2xl text-[#FF8938] " />
               <p>{location}</p>

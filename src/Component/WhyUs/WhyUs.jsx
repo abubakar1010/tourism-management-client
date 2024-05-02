@@ -9,7 +9,7 @@ const WhyUs = () => {
     return (
         <>
         <h1 className=" text-6xl font-bold mb-36 text-center">Why Choose Us</h1>
-        <div className=" flex items-center justify-between gap-12">
+        <div className=" lg:flex items-center justify-between gap-12">
             <div className=" space-y-20">
                 <div>
                 <FaGlobeAsia className=" text-[#6dc234] text-5xl" />

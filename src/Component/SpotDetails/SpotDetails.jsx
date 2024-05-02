@@ -62,7 +62,7 @@ const SpotDetails = () => {
           </div>
 
 
-          <div className=" flex gap-12 my-20">
+          <div className=" flex flex-col lg:flex-row gap-12 my-20">
           <div 
           className=" shadow-xl shadow-[#03363f0a] border-2 border-[#69646427] py-6 px-8 w-full inline-block rounded-md">
             <p>From</p>
@@ -155,7 +155,7 @@ const SpotDetails = () => {
         </div>
       </div>
 
-      <div className=" flex items-center gap-12 rounded-md bg-[#ecede7] w-[660px] py-7 px-12">
+      <div className=" flex flex-col lg:flex-row items-center gap-12 rounded-md bg-[#ecede7] lg:w-[660px] py-7 px-12">
         <div>
           {/* <FaGlobeEurope></FaGlobeEurope> */}
           <img className=" w-32" src={'https://i.postimg.cc/QMykkWdt/illustration-globe-green.png'} alt="" />
